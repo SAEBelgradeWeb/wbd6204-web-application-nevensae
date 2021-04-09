@@ -27,6 +27,6 @@
             </div>
         </div>
 
-        <a href="#link-to-submission-form" class="w-full block bg-black text-white text-center p-6 m-4">ENTER CONTEST</a>
+        <a href="contests/1" class="w-full block bg-black text-white text-center p-6 m-4">ENTER CONTEST</a>
     </x-slot>
 </x-app-layout>

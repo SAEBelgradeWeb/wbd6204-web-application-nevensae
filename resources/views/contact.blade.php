@@ -20,7 +20,8 @@
                 <h5>Get in touch</h5>
                 <h5>CONTACT</h5>
 
-                <form action="/contact">
+                <form method="post" action="/contact">
+                    @csrf
                     <label for="message">Your Message</label>
                     <textarea class="block w-full my-2" name="message" id="message" cols="10" rows="1" placeholder="Message"></textarea>
 

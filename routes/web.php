@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Contest;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,24 +23,34 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 // Use the auth to authenticate the admin to access the CMS
-Route::get('/new-route', function () {
-    return view('new-route');
-})->middleware(['auth'])->name('new-route');
 
-Route::get('/home-page', function () {
-    return view('home-page');
-})->middleware(['auth'])->name('home-page');
+Route::get('/home', 'App\Http\Controllers\HomePageController@index')->name('home');
 
-Route::get('/about-page', function () {
-    return view('about-page');
-})->middleware(['auth'])->name('about-page');
 
-Route::get('/contact-page', function () {
-    return view('contact-page');
-})->middleware(['auth'])->name('contact-page');
+Route::get('/about', function () {
+    return view('about');
+})->middleware(['auth'])->name('about');
 
-Route::get('/contest-page', function () {
-    return view('contest-page');
-})->middleware(['auth'])->name('contest-page');
+Route::get('/contact', '\App\Http\Controllers\ContactsController@show')->name('contact');
+Route::post('/contact', '\App\Http\Controllers\ContactsController@store')->name('contact');
+
+// I will need to pass the contest table to this route
+Route::get('/contests', function () {
+    return view('contests');
+})->name('contests');
+
+Route::get('contests/{contest}', function ($id) {
+    return view('contest', ['contest'=>Contest::findOrFail($id)]);
+})->name('contest');
+
+Route::get('/submission', '\App\Http\Controllers\ArtSubmissionController@show')->name('submission');
+Route::post('/submission', '\App\Http\Controllers\ArtSubmissionController@store')->name('submission');
+
+
+// CMS / API ROUTES
+Route::get('/cms-home', 'App\Http\Controllers\ApiHomeController@index')->name('cms-home');
+Route::get('/cms-users', 'App\Http\Controllers\ApiUsersController@index')->name('cms-users');
+//Route::post('/cms-users/{user}/edit', 'App\Http\Controllers\ApiUsersController@edit')->name('cms-users-edit');
+
 
 require __DIR__.'/auth.php';
