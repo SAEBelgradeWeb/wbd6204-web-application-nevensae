@@ -12,6 +12,7 @@ class Contests extends Component
     use WithPagination;
     use WithFileUploads;
     public $modalFormVisible = false;
+    public $modalConfirmDeleteVisible = false;
     public $title;
     public $description;
     public $image;
@@ -28,6 +29,11 @@ class Contests extends Component
         ];
     }
 
+    public function mount()
+    {
+//        Resets the pagination when the page is mounted
+        $this->resetPage();
+    }
 // Saves the data from a form
     public function create()
     {
@@ -50,6 +56,14 @@ class Contests extends Component
         $this->modalFormVisible = false;
         $this->resetVars();
     }
+
+//    Function that deletes a contest
+    public function delete()
+    {
+        Contest::destroy($this->modelId);
+        $this->modalConfirmDeleteVisible = false;
+        $this->resetPage();
+    }
 // Sets the model from the front end to visible (true)
     public function createShowModal()
     {
@@ -65,6 +79,13 @@ class Contests extends Component
         $this->modelId = $id;
         $this->modalFormVisible = true;
         $this->loadModel();
+    }
+
+//    Shows the delete contest modal
+    public function deleteShowModal($id)
+    {
+        $this->modelId = $id;
+        $this->modalConfirmDeleteVisible = true;
     }
 
 //    Retrieves the corresponding model id and provides the related data to that id

@@ -8,6 +8,6 @@ class Frontend extends Component
 {
     public function render()
     {
-        return view('livewire.frontend');
+        return view('livewire.frontend')->layout('layouts.frontend');
     }
 }
