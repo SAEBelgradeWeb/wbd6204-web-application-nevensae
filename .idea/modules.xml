@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/laravel-cms.iml" filepath="$PROJECT_DIR$/.idea/laravel-cms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/wbd6204-final.iml" filepath="$PROJECT_DIR$/.idea/wbd6204-final.iml" />
     </modules>
   </component>
 </project>
