@@ -15,6 +15,7 @@
                             <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">TItle</th>
                             <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">Description</th>
                             <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">Image</th>
+                            <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">Featured image</th>
                             <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">Actions</th>
                         </tr>
                         </thead>
@@ -25,6 +26,8 @@
                                     <td class="px-6 py-4 text-sm whitespace-nowrap">{{$item->title}}</td>
                                     <td class="px-6 py-4 text-sm whitespace-nowrap">{{ Illuminate\Support\Str::limit($item->description, 65, '...') }}</td>
                                     <td class="px-6 py-4 text-sm whitespace-nowrap"><img src="{{$item->image}}" class="w-20" alt="2"></td>
+                                    <td class="px-6 py-4 text-sm whitespace-nowrap"><img src="{{$item->featured_image}}" class="w-20" alt="2"></td>
+
                                     <td class="px-6 py-4 text-right text-sm">
                                         <x-jet-button wire:click="updateShowModal({{$item->id}})">
                                             {{ __('Update') }}
@@ -70,6 +73,11 @@
                 <x-jet-label for="image" value="{{ __('Image') }}" />
                 <x-jet-input id="image" class="block mt-1 w-full" type="file" wire:model.debounce.800ms="image" />
                 @error('image') <span class="error">{{$message}}</span> @enderror
+            </div>
+            <div class="mt-4">
+                <x-jet-label for="featured_image" value="{{ __('Featured Image') }}" />
+                <x-jet-input id="featured_image" class="block mt-1 w-full" type="file" wire:model.debounce.800ms="featured_image" />
+                @error('featured_image') <span class="error">{{$message}}</span> @enderror
             </div>
         </x-slot>
 

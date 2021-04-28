@@ -16,6 +16,7 @@ class Contests extends Component
     public $title;
     public $description;
     public $image;
+    public $featured_image;
     public $message;
     public $modelId;
 
@@ -25,7 +26,8 @@ class Contests extends Component
         return [
           'title' => 'required',
           'description' => 'required',
-          'image' => 'image|required'
+          'image' => 'image|required',
+            'featured_image' => 'image|required'
         ];
     }
 
@@ -95,6 +97,8 @@ class Contests extends Component
         $this->title = $data->title;
         $this->description = $data->description;
         $this->image = $data->image;
+        $this->featured_image = $data->featured_image;
+
     }
 
 //    Data being stored from the database
@@ -103,7 +107,8 @@ class Contests extends Component
         return [
             'title' => $this->title,
             'description' => $this->description,
-            'image' => $this->image->store('images', 'public')
+            'image' => $this->image->store('images', 'public'),
+            'featured_image' => $this->featured_image->store('images', 'public'),
         ];
     }
 // Properties reset
@@ -113,6 +118,8 @@ class Contests extends Component
         $this->title = null;
         $this->description = null;
         $this->image = null;
+        $this->featured_image = null;
+
     }
 
 //    Renders the view and passes the data to the view
