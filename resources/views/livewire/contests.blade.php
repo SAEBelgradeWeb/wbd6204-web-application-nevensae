@@ -23,8 +23,8 @@
                             @foreach($data as $item)
                                 <tr>
                                     <td class="px-6 py-4 text-sm whitespace-nowrap">{{$item->title}}</td>
-                                    <td class="px-6 py-4 text-sm whitespace-nowrap">{{$item->description}}</td>
-                                    <td class="px-6 py-4 text-sm whitespace-nowrap"><img src="{{$item->image}}" class="w-12" alt="2"></td>
+                                    <td class="px-6 py-4 text-sm whitespace-nowrap">{{ Illuminate\Support\Str::limit($item->description, 65, '...') }}</td>
+                                    <td class="px-6 py-4 text-sm whitespace-nowrap"><img src="{{$item->image}}" class="w-20" alt="2"></td>
                                     <td class="px-6 py-4 text-right text-sm">
                                         <x-jet-button wire:click="updateShowModal({{$item->id}})">
                                             {{ __('Update') }}

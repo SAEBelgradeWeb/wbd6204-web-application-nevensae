@@ -1,24 +1,24 @@
 <div>
 {{--    Main navigation - Extract to a component--}}
-    <div style="height: 35vh; background-color: #4a5568; opacity: 0.2;">
+    <div style="height: 35vh; opacity: 0.9;background-repeat: no-repeat;background-position: center ;background-image: url('https://i.picsum.photos/id/89/1920/400.jpg?hmac=T5LturdDB8DJAuIEwUAS5qXxH7sAD9KJo-BhY5SYHwg')">
 {{--        Navigation--}}
         <div>
             <nav>
                 <ul>
-                    <li class="inline-block p-4"><a class="text-white font-serif" href="{{url('/')}}">Home</a></li>
-                    <li class="inline-block p-4"><a class="text-white font-serif" href="{{url('#')}}">About</a></li>
-                    <li class="inline-block p-4"><a class="text-white font-serif" href="{{url('#')}}">Contact</a></li>
-                    <li class="inline-block p-4"><a class="text-white font-serif" href="{{url('#')}}">Contests</a></li>
+                    <li class="inline-block p-4"><a class="uppercase text-white font-serif" href="{{url('/')}}">Home</a></li>
+                    <li class="inline-block p-4"><a class="uppercase text-white font-serif" href="{{url('#')}}">About</a></li>
+                    <li class="inline-block p-4"><a class="uppercase text-white font-serif" href="{{url('#')}}">Contact</a></li>
+                    <li class="inline-block p-4"><a class="uppercase text-white font-serif" href="{{url('#')}}">Contests</a></li>
                 </ul>
             </nav>
         </div>
         <div>
-            <h2 class="text-6xl text-white text-center mt-12 font-serif">Home</h2>
+            <h2 class="uppercase text-6xl text-white text-center mt-12 font-serif">Home</h2>
         </div>
     </div>
 
 {{--    Main Content--}}
-    <main class="bg-gray-200">
+    <main>
         <section>
             <div class="lg:flex lg:justify-between">
                     @foreach ($data as $item)
