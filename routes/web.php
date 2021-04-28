@@ -32,4 +32,6 @@ Route::group(['middleware' => [
 });
 
 Route::get('/', Frontend::class);
+Route::get('/contest/{url}', \App\Http\Livewire\ShowContests::class);
+
 
