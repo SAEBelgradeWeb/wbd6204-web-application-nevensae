@@ -28,13 +28,15 @@
         <div class="col-span-3 ml-24">
             <h5 class="italic text-yellow-400 font-serif text-base my-2">Get in touch</h5>
             <h2 class="uppercase font-serif text-3xl my-2">Contact</h2>
-            <form action="/contact" method="POST">
-                @csrf
-                <textarea class="w-full my-2" name="message" id="" cols="30" rows="1" placeholder="Message"></textarea>
-                <input class="w-1/3 my-2" type="text" placeholder="Name" name="name">
-                <input class="w-1/3 my-2 ml-2" type="email" placeholder="Email" name="email">
-                <button class="my-2 w-1/3 bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
-                    Button
+            <form wire:submit.prevent="submit">
+                <textarea wire:model="message" class="w-full my-2" name="message" id="" cols="30" rows="1" placeholder="Message"></textarea>
+                @error('message') <span class="error">{{$message}}</span> @enderror
+                <input wire:model="name" class="w-1/3 my-2" type="text" placeholder="Name" name="name">
+                @error('namee') <span class="error">{{$message}}</span> @enderror
+                <input wire:model="email" class="w-1/3 my-2 ml-2" type="email" placeholder="Email" name="email">
+                @error('email') <span class="error">{{$message}}</span> @enderror
+                <button type="submit" class="my-2 w-1/3 bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+                    Submit
                 </button>
             </form>
         </div>

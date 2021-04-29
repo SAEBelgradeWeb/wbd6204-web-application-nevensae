@@ -13,7 +13,7 @@
         </div>
         <div class="mt-6" style="height: 20vh; background-image: url('https://i.picsum.photos/id/923/1920/300.jpg?hmac=RyvPEq86PCfqpRUD0bhjgIK13GLeC_apIm6qR4m2dNM'); opacity: 0.8;">
             <div>
-                <h2 class="text-6xl text-white inline-block font-serif pt-10 pl-20 uppercase">Contest - {{$title}} - {{$modelId}}</h2>
+                <h2 class="text-6xl text-white inline-block font-serif pt-10 pl-20 uppercase">Contest - {{$title}} </h2>
             </div>
         </div>
 

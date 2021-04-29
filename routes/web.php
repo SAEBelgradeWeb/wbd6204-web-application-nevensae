@@ -31,6 +31,7 @@ Route::group(['middleware' => [
 
 Route::get('/', Frontend::class)->name('/');
 Route::get('/contact', \App\Http\Livewire\Contact::class);
+
 Route::get('/about', \App\Http\Livewire\About::class);
 
 Route::get('/contest/{url}', \App\Http\Livewire\ShowContests::class);
