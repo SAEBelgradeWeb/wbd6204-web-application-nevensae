@@ -5,7 +5,7 @@ This project is coded in Laravel Jetstream Livewire framework. The website is an
 For this project you need the following installed Composer, Node.js, Laragon, and PHPStorm
 
 ## Instructions
-To use this project clone the repository in the root directory of your Laragon www folder. Start the Laragon service and enter your projectname.test in the browser. Navigate to the folder in the terminal and run "composer install" and "npm install" commands. You also need to load the sql file named "db_to_get_you_started" and then you can host your application.
+To use this project clone the repository in the root directory of your Laragon www folder. Start the Laragon service and enter your projectname.test in the browser. Navigate to the folder in the terminal and run "composer install" and "npm install" commands. You also need to load the sql file named "db_to_get_you_started" and then you can host your application and copy the .env-example to a newly created .env file.
 
 To register as an admin and see the admin panel go to the localhost:8000/register route and register as an admin there or go to the /login route and use the already prepared admin user;  username:neven@example.com password:admin123 
 
