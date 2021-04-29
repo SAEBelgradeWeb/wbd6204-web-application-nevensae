@@ -5,15 +5,15 @@
             <nav>
                 <ul>
                     <li class="inline-block p-4"><a class="uppercase text-black font-serif" href="{{url('/')}}">Home</a></li>
-                    <li class="inline-block p-4"><a class="uppercase text-black font-serif" href="{{url('#')}}">About</a></li>
-                    <li class="inline-block p-4"><a class="uppercase text-black font-serif" href="{{url('#')}}">Contact</a></li>
+                    <li class="inline-block p-4"><a class="uppercase text-black font-serif" href="{{url('/about')}}">About</a></li>
+                    <li class="inline-block p-4"><a class="uppercase text-black font-serif" href="{{url('/contact')}}">Contact</a></li>
                     <li class="inline-block p-4"><a class="uppercase text-black font-serif" href="{{url('#')}}">Contests</a></li>
                 </ul>
             </nav>
         </div>
         <div class="mt-6" style="height: 20vh; background-image: url('https://i.picsum.photos/id/923/1920/300.jpg?hmac=RyvPEq86PCfqpRUD0bhjgIK13GLeC_apIm6qR4m2dNM'); opacity: 0.8;">
             <div>
-                <h2 class="text-6xl text-white inline-block font-serif pt-10 pl-20 uppercase">Contest - {{$title}}</h2>
+                <h2 class="text-6xl text-white inline-block font-serif pt-10 pl-20 uppercase">Contest - {{$title}} - {{$modelId}}</h2>
             </div>
         </div>
 
@@ -71,6 +71,11 @@
                 <x-jet-label for="submission_image" value="{{ __('Submission Image') }}" />
                 <x-jet-input id="submission_image" class="block mt-1 w-full" type="file" wire:model.debounce.800ms="submission_image" />
                 @error('submission_image') <span class="error">{{$message}}</span> @enderror
+            </div>
+{{--            A user has one contest--}}
+            <div class="mt-4">
+                <x-jet-input id="contest_id" value="{{$modelId}}" class="block mt-1 w-full" type="hidden" wire:model.debounce.800ms="contest_id" />
+                @error('contest_id') <span class="error">{{$message}}</span> @enderror
             </div>
         </x-slot>
 

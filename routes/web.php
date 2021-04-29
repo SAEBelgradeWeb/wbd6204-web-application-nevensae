@@ -14,9 +14,7 @@ use App\Http\Livewire\Frontend;
 */
 
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+
 
 Route::group(['middleware' => [
     'auth:sanctum',
@@ -31,7 +29,10 @@ Route::group(['middleware' => [
     })->name('contests');
 });
 
-Route::get('/', Frontend::class);
+Route::get('/', Frontend::class)->name('/');
+Route::get('/contact', \App\Http\Livewire\Contact::class);
+Route::get('/about', \App\Http\Livewire\About::class);
+
 Route::get('/contest/{url}', \App\Http\Livewire\ShowContests::class);
 
 

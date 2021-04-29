@@ -15,6 +15,7 @@ class CreateSubmissionsTable extends Migration
     {
         Schema::create('submissions', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('contest_id');
             $table->timestamps();
             $table->string('name');
             $table->string('email');

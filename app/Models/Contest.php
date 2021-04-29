@@ -10,4 +10,5 @@ class Contest extends Model
     use HasFactory;
 
     protected $guarded = [];
+
 }

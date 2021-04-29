@@ -14,6 +14,7 @@ class ShowContests extends Component
     public $description;
     public $image;
     public $featured_image;
+    public $modelId;
 
     public $modalFormVisible = false;
 
@@ -21,11 +22,11 @@ class ShowContests extends Component
     public $email;
     public $submission_image;
     public $country;
+    public $contest_id;
+
 
     public function createShowModal()
     {
-//        $this->resetValidation();
-//        $this->resetVars();
         $this->modalFormVisible = true;
     }
 
@@ -36,6 +37,8 @@ class ShowContests extends Component
             'email' => $this->email,
             'country' => $this->country,
             'submission_image' => $this->submission_image->store('images', 'public'),
+            'contest_id' => $this->contest_id,
+
         ];
     }
 
@@ -84,5 +87,6 @@ class ShowContests extends Component
         $this->description = $data->description;
         $this->image = $data->image;
         $this->featured_image = $data->featured_image;
+        $this->contest_id = $data->id;
     }
 }

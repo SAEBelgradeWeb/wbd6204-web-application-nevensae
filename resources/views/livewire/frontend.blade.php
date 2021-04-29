@@ -6,8 +6,8 @@
             <nav>
                 <ul>
                     <li class="inline-block p-4"><a class="uppercase text-white font-serif" href="{{url('/')}}">Home</a></li>
-                    <li class="inline-block p-4"><a class="uppercase text-white font-serif" href="{{url('#')}}">About</a></li>
-                    <li class="inline-block p-4"><a class="uppercase text-white font-serif" href="{{url('#')}}">Contact</a></li>
+                    <li class="inline-block p-4"><a class="uppercase text-white font-serif" href="{{url('/about')}}">About</a></li>
+                    <li class="inline-block p-4"><a class="uppercase text-white font-serif" href="{{url('/contact')}}">Contact</a></li>
                     <li class="inline-block p-4"><a class="uppercase text-white font-serif" href="{{url('#')}}">Contests</a></li>
                 </ul>
             </nav>

@@ -10,4 +10,11 @@ class Submission extends Model
     use HasFactory;
 
     protected $guarded = [];
+
+//    A submission belongs to one Contest
+    public function contest_id()
+    {
+        return $this->hasOne(Contest::class);
+    }
+
 }

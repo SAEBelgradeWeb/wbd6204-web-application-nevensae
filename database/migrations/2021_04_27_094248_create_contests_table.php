@@ -16,9 +16,9 @@ class CreateContestsTable extends Migration
         Schema::create('contests', function (Blueprint $table) {
             $table->id();
             $table->string('title')->nullable();
-            $table->string('description')->nullable();
-            $table->string('image')->nullable();
-            $table->string('featured_image')->nullable();
+            $table->longText('description')->nullable();
+            $table->longText('image')->nullable();
+            $table->longText('featured_image')->nullable();
             $table->timestamps();
         });
     }

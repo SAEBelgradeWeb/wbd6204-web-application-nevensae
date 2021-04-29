@@ -18,6 +18,9 @@
                     <x-jet-nav-link href="{{ route('contests') }}" :active="request()->routeIs('contests')">
                         {{ __('Contests') }}
                     </x-jet-nav-link>
+                    <x-jet-nav-link href="{{ route('/') }}" :active="request()->routeIs('/')">
+                        {{ __('Home') }}
+                    </x-jet-nav-link>
                 </div>
             </div>
 
