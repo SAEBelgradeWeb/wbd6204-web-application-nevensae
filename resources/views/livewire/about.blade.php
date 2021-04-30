@@ -25,21 +25,21 @@
     <div class="mx-auto w-full text-center mt-20">
         <h4 class="italic text-yellow-400 text-sm font-serif">About our house</h4>
         <h2 class="uppercase font-serif text-3xl">Artify</h2>
-        <p class="lg:max-w-2xl mx-auto mt-4 font-serif md:max-w-2xl">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        <p class="lg:max-w-2xl mx-auto mt-4 font-serif md:max-w-2xl max-w-md">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
             Consequatur consequuntur dolor ex illo ipsum, iste nobis quae qui sapiente unde!</p>
     </div>
 
-    <div class="grid lg:grid-cols-5 md:cols-1 mt-20">
-        <p class="lg:col-span-3 ml-16 lg:max-w-2xl lg:text-left md:text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus et quos sed. Accusantium aliquid
+    <div class="grid lg:grid-cols-5 sm: cols-1 mt-20">
+        <p class="lg:col-span-3 lg:ml-16 lg:max-w-2xl lg:text-left mx-auto text-center w-5/6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus et quos sed. Accusantium aliquid
             architecto, atque autem, beatae consectetur consequatur corporis culpa cum delectus deserunt dicta dolor
             enim fuga incidunt ipsa iste labore maiores modi molestias nihil odio placeat recusandae reiciendis,</p>
-        <div class="md:text-center md:m-4 col-span-1">
+        <div class="text-center m-4 col-span-1">
             <i class="far fa-clock mr-2"></i>
             <h4 class="uppercase font-serif text-xl inline">Opened Contests</h4>
             <p class="ml-8">Tue-Thu: 09am - 09pm</p>
             <p class="ml-8">Fri-Mon: 09am - 09pm</p>
         </div>
-        <div class="md:text-center md:m-4 col-span-1">
+        <div class="text-center m-4 col-span-1">
             <i class="fas fa-print"></i>
             <h4 class="uppercase font-serif text-xl inline">Admissions</h4>
             <p class="ml-8">Adults: 25$</p>
