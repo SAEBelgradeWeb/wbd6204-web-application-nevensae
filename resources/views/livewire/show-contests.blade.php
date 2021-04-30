@@ -22,12 +22,12 @@
                     <div class="w-3/5 mx-auto my-10">
                         <img src="{{url(asset($image))}}" alt="contest_image">
                     </div>
-                    <div class="w-2/5 lg:ml-20 mx-auto">
+                    <div class="lg:w-2/5 lg:ml-20 mx-auto w-10/12 lg:text-left text-center">
                         <h2 class="uppercase text-2xl font-serif mb-5">Artify</h2>
                         <h3 class="uppercase text-xl font-serif">{{$title}}</h3>
                         <p class="font-serif lg:ml-10 mt-5">{{$description}}</p>
                         <h3 class="uppercase text-2xl font-serif my-5">Featured Image</h3>
-                        <img class="w-3/5 ml-10" src="{{url(asset($featured_image))}}" alt="featured_image">
+                        <img class="lg:w-3/5 lg:ml-10 mx-auto w-10/12" src="{{url(asset($featured_image))}}" alt="featured_image">
                         <div>
                             <h3 class="uppercase font-serif text-2xl my-5">Categories</h3>
                             <p  class="font-serif italic ml-10">Blue</p>
@@ -36,7 +36,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="xl:container mt-10">
+                <div class="xl:container mt-10 mr-10">
                     <button class="bg-gray-800 hover:bg-gray-400 text-white font-bold py-4 px-4 rounded-l w-4/5 mb-20 ml-20" wire:click="createShowModal">
                         You may enter the competition with only one entry
                     </button>
