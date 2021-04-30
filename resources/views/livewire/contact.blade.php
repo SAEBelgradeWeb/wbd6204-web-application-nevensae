@@ -19,16 +19,16 @@
         <h4 class="italic text-yellow-400 text-base font-serif">Contact form</h4>
         <h2 class="uppercase font-serif text-3xl">Get to us</h2>
         <h5>Pere Velimirovica 18/7, Beograd 11000</h5>
-        <p class="lg:max-w-2xl mx-auto mt-4 font-serif">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        <p class="lg:max-w-2xl md:max-w-2xl mx-auto mt-4 font-serif">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
             Consequatur consequuntur dolor ex illo ipsum, iste nobis quae qui sapiente unde!</p>
     </div>
 
-    <div class="grid grid-cols-6 my-16">
-        <div class="col-span-3 ml-24">
+    <div class="grid lg:grid-cols-6 md:grid-cols-1 my-16">
+        <div class="lg:col-span-3 ml-24">
             <h5 class="italic text-yellow-400 font-serif text-base my-2">Get in touch</h5>
             <h2 class="uppercase font-serif text-3xl my-2">Contact</h2>
             <form wire:submit.prevent="submit">
-                <textarea wire:model="message" class="w-full my-2" name="message" id="" cols="30" rows="1" placeholder="Message"></textarea>
+                <textarea wire:model="message" class="lg:w-full md:w-10/12 my-2" name="message" id="" cols="30" rows="1" placeholder="Message"></textarea>
                 @error('message') <span class="error">{{$message}}</span> @enderror
                 <input wire:model="name" class="w-1/3 my-2" type="text" placeholder="Name" name="name">
                 @error('namee') <span class="error">{{$message}}</span> @enderror
@@ -39,7 +39,7 @@
                 </button>
             </form>
         </div>
-        <div class="col-span-3 mx-auto">
+        <div class="lg:col-span-3 lg:mx-auto md:mx-auto">
             <h5 class="italic text-yellow-400 font-serif text-base my-2">Discover more</h5>
             <h2 class="uppercase font-serif text-3xl my-4">Information</h2>
             <p class="my-2 font-serif text-base">Pere Velimirovica 18/7, Beograd 11000</p>
