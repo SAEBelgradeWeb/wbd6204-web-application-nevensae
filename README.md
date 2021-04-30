@@ -9,3 +9,5 @@ To use this project close the repository in the root directory of your Laragon u
 
 To register as an admin and see the admin panel hit /register route and register as an admin there or go to the /login route and use the already prepared admin user;  username:neven@example.com password:admin123 
 
+The website is available on this temporary domain: http://207.154.210.69/ 
+
