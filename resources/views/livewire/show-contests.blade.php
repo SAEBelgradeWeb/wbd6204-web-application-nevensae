@@ -30,14 +30,14 @@
                         <img class="lg:w-3/5 lg:ml-10 mx-auto w-10/12" src="{{url(asset($featured_image))}}" alt="featured_image">
                         <div>
                             <h3 class="uppercase font-serif text-2xl my-5">Categories</h3>
-                            <p  class="font-serif italic ml-10">Blue</p>
-                            <p  class="font-serif italic ml-10">Wet painting</p>
-                            <p class="font-serif italic ml-10" >Modern</p>
+                            <p  class="font-serif italic lg:ml-10">Blue</p>
+                            <p  class="font-serif italic lg:ml-10">Wet painting</p>
+                            <p class="font-serif italic lg:ml-10" >Modern</p>
                         </div>
                     </div>
                 </div>
-                <div class="xl:container mt-10 mr-10">
-                    <button class="bg-gray-800 hover:bg-gray-400 text-white font-bold py-4 px-4 rounded-l w-4/5 mb-20 ml-20" wire:click="createShowModal">
+                <div class="xl:container mt-10 lg:mr-10">
+                    <button class="bg-gray-800 hover:bg-gray-400 text-white font-bold py-4 px-4  w-4/5 mb-20 ml-20" wire:click="createShowModal">
                         You may enter the competition with only one entry
                     </button>
                 </div>
