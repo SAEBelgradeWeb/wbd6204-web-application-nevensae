@@ -28,7 +28,7 @@
             <h5 class="italic text-yellow-400 font-serif text-base my-2">Get in touch</h5>
             <h2 class="uppercase font-serif text-3xl my-2">Contact</h2>
             <form wire:submit.prevent="submit">
-                <textarea wire:model="message" class="lg:w-full md:w-10/12 my-2 block" name="message" id="" cols="30" rows="1" placeholder="Message"></textarea>
+                <textarea wire:model="message" class="lg:w-full md:w-10/12 w-10/12 my-2 block" name="message" id="" cols="30" rows="1" placeholder="Message"></textarea>
                 @error('message') <span class="error">{{$message}}</span> @enderror
                 <input wire:model="name" class="w-1/3 my-2" type="text" placeholder="Name" name="name">
                 @error('namee') <span class="error">{{$message}}</span> @enderror
