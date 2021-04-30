@@ -36,8 +36,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="xl:container mt-10 lg:mr-10">
-                    <button class="bg-gray-800 hover:bg-gray-400 text-white font-bold py-4 px-4  w-4/5 mb-20 ml-20" wire:click="createShowModal">
+                <div class="xl:container mt-10 lg:mr-10 flex justify-center">
+                    <button class="bg-gray-800 hover:bg-gray-400 text-white font-bold py-4 px-4  lg:w-4/5 mb-20" wire:click="createShowModal">
                         You may enter the competition with only one entry
                     </button>
                 </div>
