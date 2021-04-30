@@ -22,7 +22,9 @@
             <div class="lg:flex lg:justify-between">
                     @foreach ($data as $item)
                         <div class="lg:w-1/3 lg:mx-12 md:mx-auto md:w-1/2 m-16">
-                            <img class="h-auto" src="{{asset($item->image)}}" alt="Contest">
+                            <div style="height: 300px">
+                                <img class="h-full" src="{{asset($item->image)}}" alt="Contest">
+                            </div>
                             <h2 class="text-center font-serif text-2xl">{{$item->title}}</h2>
                             <p class="text-center font-serif">{{$item->description}}</p>
                             <button class="text-center bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded w-full mt-4">

@@ -26,8 +26,8 @@ class Contests extends Component
         return [
           'title' => 'required',
           'description' => 'required',
-          'image' => 'image|required',
-            'featured_image' => 'image|required'
+          'image' => 'image|required|mimes:png,jpg,jpeg',
+            'featured_image' => 'image|required|mimes:png,jpg,jpeg'
         ];
     }
 
